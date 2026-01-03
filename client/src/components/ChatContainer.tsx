@@ -134,7 +134,7 @@ const handleSendImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
   }, [messages]);
 
   return selectedUser ? (
-    <div className="h-full overflow-scroll relative backdrop-blur-lg">
+    <div className="h-full overflow-y-scroll relative backdrop-blur-lg">
       {/* --- Header --- */}
       <div className="flex items-center gap-3 py-3 mx-4 border-b border-stone-500">
         <img
@@ -157,7 +157,7 @@ const handleSendImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
         <img src={assets.help_icon} alt="" className="max-md:hidden max-w-5" />
       </div>
       {/* --- Chat Area --- */}
-      <div className="flex flex-col overflow-y-scroll p-3 pb-6">
+      <div className="flex flex-col overflow-y-scroll p-3 pb-6 h-[90%]">
         {messages.map((msg, index) => (
           <div
             key={index}
@@ -201,7 +201,7 @@ const handleSendImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
         <div ref={scrollEnd}></div>
       </div>
       {/* --- Bottom Area --- */}
-      <div className="sticky bottom-0 left-0 right-0 flex items-center gap-3 p-3">
+      <div className="absolute bottom-0 left-0 right-0 flex items-center gap-3 p-3">
         <div className="flex-1 flex items-center bg-gray-100/12 px-3 rounded-full">
           <input
             type="text"
