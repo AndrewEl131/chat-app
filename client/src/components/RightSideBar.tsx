@@ -3,14 +3,6 @@ import assets from "../assets/assets";
 import { ChatContext } from "../../context/ChatContext";
 import { AuthContext } from "../../context/AuthContext";
 
-type User = {
-  _id: string;
-  fullName: string;
-  profilePic?: string;
-  bio?: string;
-  createdAt?: string;
-};
-
 export default function RightSideBar() {
   const chat = useContext(ChatContext);
   const auth = useContext(AuthContext);
@@ -53,7 +45,7 @@ export default function RightSideBar() {
 
       <div className="px-5 text-xs">
         <p>Media</p>
-        <div className="mt-2 max-h-[150px] overflow-y-scroll grid grid-cols-2 gap-4 opacity-80">
+        <div className="mt-2 max-h-37.5 overflow-y-scroll grid grid-cols-2 gap-4 opacity-80">
           {msgImages.map((url, index) => (
             <div
               key={index}

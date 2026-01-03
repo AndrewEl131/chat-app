@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import ChatContainer from "../components/ChatContainer";
 import RightSideBar from "../components/RightSideBar";
 import SideBar from "../components/SideBar";

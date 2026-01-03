@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import assets from "../assets/assets.ts";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext.tsx";
@@ -8,11 +8,6 @@ type User = {
   _id: string;
   fullName: string;
   profilePic?: string;
-};
-
-type SideBarProps = {
-  selectedUser: User | null;
-  setSelectedUser: React.Dispatch<React.SetStateAction<User | null>>;
 };
 
 export default function SideBar() {

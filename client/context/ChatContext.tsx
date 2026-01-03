@@ -6,7 +6,6 @@ import {
   type ReactNode,
 } from "react";
 import { AuthContext } from "./AuthContext";
-import { Socket } from "socket.io-client";
 import axios from "axios";
 import toast from "react-hot-toast";
 
