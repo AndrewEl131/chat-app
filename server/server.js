@@ -51,4 +51,9 @@ await connectDB();
 
 const PORT = process.env.PORT || 3000;
 
+if(process.env.NODE_ENV !== "production"){
 server.listen(PORT, () => console.log("Server is running on PORT:" + PORT))
+}
+
+// Export for vercel
+export default server;
